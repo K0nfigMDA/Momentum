@@ -33,9 +33,9 @@ async function getWeather() {
 	weatherError.textContent = ''
 	weatherIcon.className = 'weather-icon owf';
 	weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-	temperature.textContent = `${data.main.temp}°C`;
+	temperature.textContent = `${Math.round(data.main.temp)}°C`;
 	humidity.textContent = `Humidity ${data.main.humidity}%`;
-	wind.textContent = `Wind speed ${data.wind.speed}m/s`;
+	wind.textContent = `Wind speed ${Math.round(data.wind.speed)}m/s`;
 	weatherDescription.textContent = data.weather[0].description;
 	}
  }
