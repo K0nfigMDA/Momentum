@@ -4,7 +4,7 @@ const playPauseBtn = document.querySelector('.play')
 const prevBtn = document.querySelector('.play-prev')
 const nextBtn = document.querySelector('.play-next')
 const playListContainer = document.querySelector('.play-list')
-const li = document.createElement('li');
+
 
 
 
@@ -29,6 +29,8 @@ playList.forEach((index) => {
 
 
 const audio = new Audio()
+console.dir(audio);
+
 
 function playNext() {
 	
@@ -74,6 +76,7 @@ function playPauseAudio() {
 
 
 playPauseBtn.addEventListener('click', playPauseAudio)
+audio.addEventListener('ended', playNext)
 prevBtn.addEventListener('click', playPrev)
 nextBtn.addEventListener('click', playNext)
 
