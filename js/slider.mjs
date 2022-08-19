@@ -40,6 +40,29 @@ function setBg(timeOfDay, bgNum) {
 	
 }
 
+
+/* async function getLinkToImageUnsplash(timeOfDay) {
+	const url = `https://api.unsplash.com/photos/random?orientation=landscape&query=${timeOfDay}&client_id=cEdZ2VtLW17tcuba09dhp_nD-IHdqcziBSdff4AUHpg`;
+	const res = await fetch(url);
+	const data = await res.json(); 
+	const img = new Image()
+	img.src = data.urls.regular
+	img.onload = () => {document.body.style.backgroundImage = `url('${data.urls.regular}')`}
+	}
+
+async function getLinkToImageFlickr(timeOfDay) {
+		const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=8945799a0cf0228d0452f33c2014bcae&tags=${timeOfDay}&extras=url_l&format=json&nojsoncallback=1`;
+		const res = await fetch(url);
+		const data = await res.json(); 
+		const img = new Image()
+		img.src = data.photos.photo[getRandomNum(1, data.photos.photo.length)].url_l
+		img.onload = () => {document.body.style.backgroundImage = `url('${img.src}')`}
+		
+		} 
+ */
+/* 	getLinkToImageUnsplash(getTimeOfDay()) */
+/* getLinkToImageFlickr(getTimeOfDay()) */
+
 setBg(getTimeOfDay(),randomNum)
 
 
